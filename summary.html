@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summary</title>
+</head>
+
+<body>
+
+    <!-- onClick, onChange, onBlur, onFocus -->
+    <button onClick="handleClickGreen()">Click Me</button>
+
+    <input id="email-field" type="email" placeholder="Enter your email">
+
+    <h1 id="mouse-header">More Mouce Event</h1>
+    <script>
+        function handleClickGreen() {
+            document.body.style.backgroundColor = 'red';
+        }
+
+        //keyup
+        document.getElementById('email-field').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        })
+
+        //mousemove
+        document.getElementById('mouse-header').addEventListener('mousemove', function (event) {
+            console.log("Mouse is moving..... Giving Sursuri");
+        })
+
+        //mouseenter
+        document.getElementById('mouse-header').addEventListener('mouseenter', function (event) {
+            console.log("Mouse is moving..... GIving Chulkani");
+        })
+    </script>
+</body>
+
+</html>

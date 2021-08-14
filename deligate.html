@@ -18,6 +18,42 @@
         <li class="item">Odit, ab.</li>
         <li class="item">Minus, reprehenderit!</li>
     </ul>
+    <button id="add-item">Add item</button>
+    <script>
+        const items = document.getElementsByClassName('item');
+        for (const item of items) {
+            item.addEventListener('click', function () {
+                //Process 1
+                // document.getElementById('item-container').removeChild(item);
+
+
+                //process 2
+                event.target.parentNode.removeChild(event.target);
+            });
+        }
+        document.getElementById('add-item').addEventListener('click', function () {
+            const li = document.createElement('li');
+            li.innerText = 'Bran new Item - $';
+            li.classList.add('item');
+            const parent = document.getElementById('item-container');
+            parent.appendChild(li);
+
+            /* const items = document.getElementsByClassName('item');
+            for (const item of items) {
+                item.addEventListener('click', function () {
+                    //Process 1
+                    // document.getElementById('item-container').removeChild(item);
+
+
+                    //process 2
+                    event.target.parentNode.removeChild(event.target);
+                });
+            } */
+        });
+        document.getElementById('item-container').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target);
+        });
+    </script>
 </body>
 
 </html>
