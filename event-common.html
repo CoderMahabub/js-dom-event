@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="clicking-method"></p>
+    <input id="name-field" type="text">
+    <button id="update-name">Update</button>
+
+
+    <button onclick="handleJastFunctionClick()">Just Function</button>
+    <button id="handle-event">Direct Add Event Listener</button>
+
+    <script>
+        //Indirect Method Using Function (Just Function Button)
+        function handleJastFunctionClick() {
+            const clickingMethod = document.getElementById('clicking-method');
+            clickingMethod.innerText = 'Set by using function';
+        }
+
+        //Direct Method (Direct Add Event Listener Button)
+        document.getElementById('handle-event').addEventListener('click', function () {
+            const paragraph = document.getElementById('clicking-method');
+            paragraph.innerText = 'Direct Function use by a single id calling';
+        })
+
+        //direct another(Update Button)
+        document.getElementById('update-name').addEventListener('click', function () {
+            const nameField = document.getElementById('name-field');
+            const paragraph = document.getElementById('clicking-method');
+            paragraph.innerText = nameField.value;
+            nameField.value = '';
+        })
+    </script>
+</body>
+
+</html>
