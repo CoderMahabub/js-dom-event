@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="paragraph"></p>
+    <button onclick="showParagraph()">Click To Show Paragraph</button>
+    <button onclick="showPara2()">Click me to show second paragraph</button>
+    <script>
+
+        function showParagraph() {
+            const futureParagraph = document.getElementById('paragraph');
+            futureParagraph.innerText = "THis is a paragraph one";
+            document.body.style.backgroundColor = 'green';
+            document.body.style.color = 'red';
+        }
+        function showPara2() {
+            const futureParagraph = document.getElementById('paragraph');
+            futureParagraph.innerText = "This is second paragraph";
+            document.body.style.backgroundColor = 'red';
+            document.body.style.color = 'white';
+        }
+    </script>
+</body>
+
+</html>

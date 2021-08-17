@@ -2,6 +2,12 @@ function makeRed() {
     document.body.style.backgroundColor = "red";
 }
 
+
+
+
+
+
+
 //Handle Blue Button Click by Setting Function name only
 const blueButton = document.getElementById('make-blue-button');
 blueButton.onclick = makeBlue;
@@ -19,12 +25,29 @@ greenButton.onclick = function () {
     document.body.style.backgroundColor = 'green';
 }
 
-//Handle by addEventListener Process 1
+/* //Handle by addEventListener Process 1
 const godlenButton = document.getElementById('make-goldenrod');
 godlenButton.addEventListener('click', makeGoldenRod);
 function makeGoldenRod() {
     document.body.style.backgroundColor = 'goldenrod';
-}
+} */
+
+
+
+
+
+
+
+
+
+const goldenButton = document.getElementById('make-goldenrod');
+goldenButton.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'goldenrod';
+});
+
+
+
+
 //Add EventListener in different Ways process 2
 const hotPinkButton = document.getElementById('make-hotpink');
 hotPinkButton.addEventListener('click', function () {
@@ -34,3 +57,9 @@ hotPinkButton.addEventListener('click', function () {
 document.getElementById('make-lightblue').addEventListener('click', function () {
     document.body.style.backgroundColor = 'lightblue';
 })
+
+
+const hotpinkButton = document.getElementById('make-seagreen-button');
+hotpinkButton.onclick = function () {
+    document.body.style.backgroundColor = 'seagreen';
+}
